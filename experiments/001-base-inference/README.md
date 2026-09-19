@@ -2,8 +2,7 @@
 
 ## Objective
 
-Run the pretrained base model locally and verify
-that inference can successfully run on the NVIDIA GPU.
+Run the pretrained base model locally and verify that inference can successfully run on the NVIDIA GPU.
 
 ## Model
 
@@ -19,8 +18,7 @@ that inference can successfully run on the NVIDIA GPU.
 
 ## Task
 
-Generate text from a simple prompt using the pretrained
-base model without any additional training or fine-tuning.
+Generate text from a simple prompt using the pretrained base model without any additional training or fine-tuning.
 
 ## Result
 
@@ -28,11 +26,8 @@ Inference successfully ran on the NVIDIA GPU.
 
 ## Observation
 
-The pretrained base model can be loaded and executed
-locally using GPU acceleration.
+The pretrained base model can be loaded and executed locally using GPU acceleration. This experiment establishes the functional inference baseline before CPT, SFT, quantization, and inference optimization.
 
-This experiment establishes the functional baseline before:
-- CPT
-- SFT
-- Quantization
-- Inference optimization
+## Report
+
+[View detailed report](../../reports/001-base-inference.md)
