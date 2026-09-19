@@ -28,3 +28,8 @@ torchao = { index = "pytorch-cu129" }
 name = "pytorch-cu129"
 url = "https://download.pytorch.org/whl/cu129"
 explicit = true
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.8",
+]
