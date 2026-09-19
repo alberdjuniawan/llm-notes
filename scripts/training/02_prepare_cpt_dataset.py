@@ -1,3 +1,4 @@
+import json
 from argparse import ArgumentParser
 from pathlib import Path
 
@@ -59,21 +60,47 @@ def main() -> None:
 
     input_ids = tokenized["input_ids"]
 
-    print(f"Total tokens: {len(input_ids)}")
+    total_tokens = len(input_ids)
+    usable_tokens = (total_tokens // args.block_size) * args.block_size
+    dropped_tokens = total_tokens - usable_tokens
+
+    input_ids = input_ids[:usable_tokens]
 
     sequences = [
         input_ids[start : start + args.block_size]
-        for start in range(0, len(input_ids), args.block_size)
+        for start in range(0, usable_tokens, args.block_size)
     ]
 
     dataset = Dataset.from_dict({"input_ids": sequences})
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.mkdir(parents=True, exist_ok=True)
+
     dataset.save_to_disk(str(args.output))
 
+    metadata = {
+        "model": args.model,
+        "input": str(args.input),
+        "block_size": args.block_size,
+        "total_tokens": total_tokens,
+        "usable_tokens": usable_tokens,
+        "dropped_tokens": dropped_tokens,
+        "num_sequences": len(dataset),
+    }
+
+    metadata_path = args.output.with_name(f"{args.output.name}_metadata.json")
+    metadata_path.write_text(
+        json.dumps(metadata, indent=2),
+        encoding="utf-8",
+    )
+
+    print(f"Total tokens: {total_tokens}")
+    print(f"Usable tokens: {usable_tokens}")
+    print(f"Dropped tokens: {dropped_tokens}")
     print(f"Sequences: {len(dataset)}")
     print(f"Block size: {args.block_size}")
-    print(f"Saved to: {args.output}")
+    print(f"Saved dataset to: {args.output}")
+    print(f"Saved metadata to: {metadata_path}")
 
 
 if __name__ == "__main__":
