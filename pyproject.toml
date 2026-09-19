@@ -1,0 +1,30 @@
+[project]
+name = "llm-notes"
+version = "0.1.0"
+description = "A hands-on learning repository for understanding LLM training, fine-tuning, inference, and optimization."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate==1.15.0",
+    "bitsandbytes==0.50.2",
+    "datasets==4.3.0",
+    "peft==0.21.0",
+    "safetensors==0.8.0",
+    "sentencepiece==0.2.2",
+    "torch==2.12.1+cu129",
+    "torchao==0.17.0+cu129",
+    "torchvision==0.27.1+cu129",
+    "transformers==5.5.0",
+    "trl==0.24.0",
+    "unsloth==2026.9.6",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu129" }
+torchvision = { index = "pytorch-cu129" }
+torchao = { index = "pytorch-cu129" }
+
+[[tool.uv.index]]
+name = "pytorch-cu129"
+url = "https://download.pytorch.org/whl/cu129"
+explicit = true
