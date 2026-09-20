@@ -1,0 +1,791 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M",
+  "compute_dtype": "bfloat16",
+  "quantization": {
+    "type": "NF4",
+    "bits": 4,
+    "groupwise": true
+  },
+  "num_prompts": 5,
+  "max_new_tokens": 30,
+  "timed_runs_per_prompt": 3,
+  "bf16": {
+    "memory_after_load_mib": 256.59033203125,
+    "peak_gpu_memory_mib": 266.38720703125,
+    "prompts": [
+      {
+        "prompt": "Explain photosynthesis in simple terms:",
+        "generated_text": "Explain photosynthesis in simple terms:\n\nPhotosynthesis is the process by which plants convert light energy into chemical energy.\n\nPlants use the energy from the sun to make food.",
+        "latency_seconds": 0.3505123669997374,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 17.5
+          },
+          {
+            "rank": 2,
+            "token_id": 2109,
+            "token": " plants",
+            "logit": 16.75
+          },
+          {
+            "rank": 3,
+            "token_id": 14081,
+            "token": " Plants",
+            "logit": 16.625
+          },
+          {
+            "rank": 4,
+            "token_id": 19173,
+            "token": " photosynthesis",
+            "logit": 16.5
+          },
+          {
+            "rank": 5,
+            "token_id": 357,
+            "token": " it",
+            "logit": 16.5
+          }
+        ]
+      },
+      {
+        "prompt": "What is a fraction?",
+        "generated_text": "What is a fraction?\n\nA fraction is a number that is divided into two equal parts.\n\nFor example, 1/2 is a fraction because 1",
+        "latency_seconds": 0.3352655489998142,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 20.625
+          },
+          {
+            "rank": 2,
+            "token_id": 330,
+            "token": " A",
+            "logit": 19.25
+          },
+          {
+            "rank": 3,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 17.875
+          },
+          {
+            "rank": 4,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.875
+          },
+          {
+            "rank": 5,
+            "token_id": 657,
+            "token": " It",
+            "logit": 17.875
+          }
+        ]
+      },
+      {
+        "prompt": "Explain how rain forms:",
+        "generated_text": "Explain how rain forms:\n\nRain is formed when water vapor (water molecules) in the air condenses (changes from a gas to a liquid) into liquid water droplets",
+        "latency_seconds": 0.33647468100025435,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.0
+          },
+          {
+            "rank": 2,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.5
+          },
+          {
+            "rank": 3,
+            "token_id": 8866,
+            "token": "\n\n ",
+            "logit": 16.625
+          },
+          {
+            "rank": 4,
+            "token_id": 378,
+            "token": " The",
+            "logit": 16.625
+          },
+          {
+            "rank": 5,
+            "token_id": 260,
+            "token": " the",
+            "logit": 16.5
+          }
+        ]
+      },
+      {
+        "prompt": "What is the difference between a CPU and a GPU?",
+        "generated_text": "What is the difference between a CPU and a GPU?\n\nA CPU is a central processing unit (CPU) that executes instructions. A GPU is a graphics processing unit (GPU) that performs calculations on",
+        "latency_seconds": 0.3387664179999774,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 20.125
+          },
+          {
+            "rank": 2,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 18.125
+          },
+          {
+            "rank": 3,
+            "token_id": 330,
+            "token": " A",
+            "logit": 17.25
+          },
+          {
+            "rank": 4,
+            "token_id": 378,
+            "token": " The",
+            "logit": 17.0
+          },
+          {
+            "rank": 5,
+            "token_id": 8866,
+            "token": "\n\n ",
+            "logit": 16.875
+          }
+        ]
+      },
+      {
+        "prompt": "Why does the Moon have phases?",
+        "generated_text": "Why does the Moon have phases?\n\nThe Moon has phases because it is a sphere. The Moon is a sphere because it is a solid object. The Moon is a sphere because",
+        "latency_seconds": 0.33056481600033294,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.375
+          },
+          {
+            "rank": 2,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.125
+          },
+          {
+            "rank": 3,
+            "token_id": 4896,
+            "token": " Why",
+            "logit": 16.5
+          },
+          {
+            "rank": 4,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.25
+          },
+          {
+            "rank": 5,
+            "token_id": 378,
+            "token": " The",
+            "logit": 16.25
+          }
+        ]
+      }
+    ]
+  },
+  "nf4": {
+    "memory_after_load_mib": 119.30029296875,
+    "peak_gpu_memory_mib": 120.97216796875,
+    "prompts": [
+      {
+        "prompt": "Explain photosynthesis in simple terms:",
+        "generated_text": "Explain photosynthesis in simple terms:\n\nPlants use light energy to make food from carbon dioxide and water. Plants use light energy to make food from carbon dioxide and water. Plants use",
+        "latency_seconds": 0.4617544289999387,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 2109,
+            "token": " plants",
+            "logit": 17.125
+          },
+          {
+            "rank": 2,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 17.125
+          },
+          {
+            "rank": 3,
+            "token_id": 14081,
+            "token": " Plants",
+            "logit": 16.75
+          },
+          {
+            "rank": 4,
+            "token_id": 19268,
+            "token": " Photos",
+            "logit": 16.125
+          },
+          {
+            "rank": 5,
+            "token_id": 1550,
+            "token": " When",
+            "logit": 15.8125
+          }
+        ]
+      },
+      {
+        "prompt": "What is a fraction?",
+        "generated_text": "What is a fraction?\n\nA fraction is a number that is made up of two parts.\n\nFor example, 3/4 is a fraction because it is",
+        "latency_seconds": 0.4649062230000709,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.5
+          },
+          {
+            "rank": 2,
+            "token_id": 657,
+            "token": " It",
+            "logit": 17.625
+          },
+          {
+            "rank": 3,
+            "token_id": 330,
+            "token": " A",
+            "logit": 17.25
+          },
+          {
+            "rank": 4,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.875
+          },
+          {
+            "rank": 5,
+            "token_id": 1073,
+            "token": " How",
+            "logit": 16.875
+          }
+        ]
+      },
+      {
+        "prompt": "Explain how rain forms:",
+        "generated_text": "Explain how rain forms:\n\nThe sun's heat causes water to evaporate from the ground. As the water evaporates, it turns into water vapor. When the water vapor turns",
+        "latency_seconds": 0.4707495900001959,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.25
+          },
+          {
+            "rank": 2,
+            "token_id": 3622,
+            "token": " http",
+            "logit": 17.875
+          },
+          {
+            "rank": 3,
+            "token_id": 5141,
+            "token": " https",
+            "logit": 17.25
+          },
+          {
+            "rank": 4,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.0
+          },
+          {
+            "rank": 5,
+            "token_id": 15143,
+            "token": " Rain",
+            "logit": 16.375
+          }
+        ]
+      },
+      {
+        "prompt": "What is the difference between a CPU and a GPU?",
+        "generated_text": "What is the difference between a CPU and a GPU?\n\nA CPU is a computer that uses a microprocessor to perform calculations. A GPU is a computer that uses a graphics card to perform calculations.\n",
+        "latency_seconds": 0.4678291770001124,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.25
+          },
+          {
+            "rank": 2,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.875
+          },
+          {
+            "rank": 3,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 16.625
+          },
+          {
+            "rank": 4,
+            "token_id": 378,
+            "token": " The",
+            "logit": 16.5
+          },
+          {
+            "rank": 5,
+            "token_id": 330,
+            "token": " A",
+            "logit": 16.5
+          }
+        ]
+      },
+      {
+        "prompt": "Why does the Moon have phases?",
+        "generated_text": "Why does the Moon have phases?\n\nThe Moon has phases. The Moon is always in the same place in the sky, but it is not always the same size. The Moon",
+        "latency_seconds": 0.4670944149997922,
+        "top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 18.75
+          },
+          {
+            "rank": 2,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.625
+          },
+          {
+            "rank": 3,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 16.375
+          },
+          {
+            "rank": 4,
+            "token_id": 1073,
+            "token": " How",
+            "logit": 16.375
+          },
+          {
+            "rank": 5,
+            "token_id": 378,
+            "token": " The",
+            "logit": 15.75
+          }
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "aggregate": {
+      "average_mean_abs_logit_error": 0.7167222797870636,
+      "average_max_abs_logit_error": 3.83828125,
+      "top1_agreement_rate": 1,
+      "average_top5_overlap": 0.64,
+      "average_kl_divergence_nf4_vs_bf16": 0.21225883811712265,
+      "average_bf16_latency_seconds": 0.33831676620002327,
+      "average_nf4_latency_seconds": 0.466466766800022,
+      "latency_relative_change": 0.37878702270472914,
+      "bf16_peak_memory_mib": 266.38720703125,
+      "nf4_peak_memory_mib": 120.97216796875,
+      "memory_relative_reduction": 0.5458784627200258
+    },
+    "prompts": [
+      {
+        "mean_abs_logit_error": 0.6860306262969971,
+        "max_abs_logit_error": 3.6875,
+        "top1_agreement": 1,
+        "top5_overlap": 0.6,
+        "kl_divergence_nf4_vs_bf16": 0.1280614137649536,
+        "prompt": "Explain photosynthesis in simple terms:",
+        "bf16_text": "Explain photosynthesis in simple terms:\n\nPhotosynthesis is the process by which plants convert light energy into chemical energy.\n\nPlants use the energy from the sun to make food.",
+        "nf4_text": "Explain photosynthesis in simple terms:\n\nPlants use light energy to make food from carbon dioxide and water. Plants use light energy to make food from carbon dioxide and water. Plants use",
+        "bf16_latency_seconds": 0.3505123669997374,
+        "nf4_latency_seconds": 0.4617544289999387,
+        "bf16_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 17.5
+          },
+          {
+            "rank": 2,
+            "token_id": 2109,
+            "token": " plants",
+            "logit": 16.75
+          },
+          {
+            "rank": 3,
+            "token_id": 14081,
+            "token": " Plants",
+            "logit": 16.625
+          },
+          {
+            "rank": 4,
+            "token_id": 19173,
+            "token": " photosynthesis",
+            "logit": 16.5
+          },
+          {
+            "rank": 5,
+            "token_id": 357,
+            "token": " it",
+            "logit": 16.5
+          }
+        ],
+        "nf4_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 2109,
+            "token": " plants",
+            "logit": 17.125
+          },
+          {
+            "rank": 2,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 17.125
+          },
+          {
+            "rank": 3,
+            "token_id": 14081,
+            "token": " Plants",
+            "logit": 16.75
+          },
+          {
+            "rank": 4,
+            "token_id": 19268,
+            "token": " Photos",
+            "logit": 16.125
+          },
+          {
+            "rank": 5,
+            "token_id": 1550,
+            "token": " When",
+            "logit": 15.8125
+          }
+        ]
+      },
+      {
+        "mean_abs_logit_error": 0.7425025105476379,
+        "max_abs_logit_error": 3.9296875,
+        "top1_agreement": 1,
+        "top5_overlap": 0.8,
+        "kl_divergence_nf4_vs_bf16": 0.19420424103736877,
+        "prompt": "What is a fraction?",
+        "bf16_text": "What is a fraction?\n\nA fraction is a number that is divided into two equal parts.\n\nFor example, 1/2 is a fraction because 1",
+        "nf4_text": "What is a fraction?\n\nA fraction is a number that is made up of two parts.\n\nFor example, 3/4 is a fraction because it is",
+        "bf16_latency_seconds": 0.3352655489998142,
+        "nf4_latency_seconds": 0.4649062230000709,
+        "bf16_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 20.625
+          },
+          {
+            "rank": 2,
+            "token_id": 330,
+            "token": " A",
+            "logit": 19.25
+          },
+          {
+            "rank": 3,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 17.875
+          },
+          {
+            "rank": 4,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.875
+          },
+          {
+            "rank": 5,
+            "token_id": 657,
+            "token": " It",
+            "logit": 17.875
+          }
+        ],
+        "nf4_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.5
+          },
+          {
+            "rank": 2,
+            "token_id": 657,
+            "token": " It",
+            "logit": 17.625
+          },
+          {
+            "rank": 3,
+            "token_id": 330,
+            "token": " A",
+            "logit": 17.25
+          },
+          {
+            "rank": 4,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.875
+          },
+          {
+            "rank": 5,
+            "token_id": 1073,
+            "token": " How",
+            "logit": 16.875
+          }
+        ]
+      },
+      {
+        "mean_abs_logit_error": 0.9986739158630371,
+        "max_abs_logit_error": 5.421875,
+        "top1_agreement": 1,
+        "top5_overlap": 0.4,
+        "kl_divergence_nf4_vs_bf16": 0.5202637910842896,
+        "prompt": "Explain how rain forms:",
+        "bf16_text": "Explain how rain forms:\n\nRain is formed when water vapor (water molecules) in the air condenses (changes from a gas to a liquid) into liquid water droplets",
+        "nf4_text": "Explain how rain forms:\n\nThe sun's heat causes water to evaporate from the ground. As the water evaporates, it turns into water vapor. When the water vapor turns",
+        "bf16_latency_seconds": 0.33647468100025435,
+        "nf4_latency_seconds": 0.4707495900001959,
+        "bf16_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.0
+          },
+          {
+            "rank": 2,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.5
+          },
+          {
+            "rank": 3,
+            "token_id": 8866,
+            "token": "\n\n ",
+            "logit": 16.625
+          },
+          {
+            "rank": 4,
+            "token_id": 378,
+            "token": " The",
+            "logit": 16.625
+          },
+          {
+            "rank": 5,
+            "token_id": 260,
+            "token": " the",
+            "logit": 16.5
+          }
+        ],
+        "nf4_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.25
+          },
+          {
+            "rank": 2,
+            "token_id": 3622,
+            "token": " http",
+            "logit": 17.875
+          },
+          {
+            "rank": 3,
+            "token_id": 5141,
+            "token": " https",
+            "logit": 17.25
+          },
+          {
+            "rank": 4,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.0
+          },
+          {
+            "rank": 5,
+            "token_id": 15143,
+            "token": " Rain",
+            "logit": 16.375
+          }
+        ]
+      },
+      {
+        "mean_abs_logit_error": 0.4974759519100189,
+        "max_abs_logit_error": 2.66796875,
+        "top1_agreement": 1,
+        "top5_overlap": 0.6,
+        "kl_divergence_nf4_vs_bf16": 0.1045939177274704,
+        "prompt": "What is the difference between a CPU and a GPU?",
+        "bf16_text": "What is the difference between a CPU and a GPU?\n\nA CPU is a central processing unit (CPU) that executes instructions. A GPU is a graphics processing unit (GPU) that performs calculations on",
+        "nf4_text": "What is the difference between a CPU and a GPU?\n\nA CPU is a computer that uses a microprocessor to perform calculations. A GPU is a computer that uses a graphics card to perform calculations.\n",
+        "bf16_latency_seconds": 0.3387664179999774,
+        "nf4_latency_seconds": 0.4678291770001124,
+        "bf16_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 20.125
+          },
+          {
+            "rank": 2,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 18.125
+          },
+          {
+            "rank": 3,
+            "token_id": 330,
+            "token": " A",
+            "logit": 17.25
+          },
+          {
+            "rank": 4,
+            "token_id": 378,
+            "token": " The",
+            "logit": 17.0
+          },
+          {
+            "rank": 5,
+            "token_id": 8866,
+            "token": "\n\n ",
+            "logit": 16.875
+          }
+        ],
+        "nf4_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.25
+          },
+          {
+            "rank": 2,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.875
+          },
+          {
+            "rank": 3,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 16.625
+          },
+          {
+            "rank": 4,
+            "token_id": 378,
+            "token": " The",
+            "logit": 16.5
+          },
+          {
+            "rank": 5,
+            "token_id": 330,
+            "token": " A",
+            "logit": 16.5
+          }
+        ]
+      },
+      {
+        "mean_abs_logit_error": 0.658928394317627,
+        "max_abs_logit_error": 3.484375,
+        "top1_agreement": 1,
+        "top5_overlap": 0.8,
+        "kl_divergence_nf4_vs_bf16": 0.11417082697153091,
+        "prompt": "Why does the Moon have phases?",
+        "bf16_text": "Why does the Moon have phases?\n\nThe Moon has phases because it is a sphere. The Moon is a sphere because it is a solid object. The Moon is a sphere because",
+        "nf4_text": "Why does the Moon have phases?\n\nThe Moon has phases. The Moon is always in the same place in the sky, but it is not always the same size. The Moon",
+        "bf16_latency_seconds": 0.33056481600033294,
+        "nf4_latency_seconds": 0.4670944149997922,
+        "bf16_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 19.375
+          },
+          {
+            "rank": 2,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 17.125
+          },
+          {
+            "rank": 3,
+            "token_id": 4896,
+            "token": " Why",
+            "logit": 16.5
+          },
+          {
+            "rank": 4,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.25
+          },
+          {
+            "rank": 5,
+            "token_id": 378,
+            "token": " The",
+            "logit": 16.25
+          }
+        ],
+        "nf4_top_tokens": [
+          {
+            "rank": 1,
+            "token_id": 198,
+            "token": "\n",
+            "logit": 18.75
+          },
+          {
+            "rank": 2,
+            "token_id": 1812,
+            "token": " What",
+            "logit": 16.625
+          },
+          {
+            "rank": 3,
+            "token_id": 1116,
+            "token": "\n\n",
+            "logit": 16.375
+          },
+          {
+            "rank": 4,
+            "token_id": 1073,
+            "token": " How",
+            "logit": 16.375
+          },
+          {
+            "rank": 5,
+            "token_id": 378,
+            "token": " The",
+            "logit": 15.75
+          }
+        ]
+      }
+    ]
+  }
+}
