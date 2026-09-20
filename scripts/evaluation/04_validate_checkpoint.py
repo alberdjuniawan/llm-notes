@@ -6,12 +6,12 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 def parse_args() -> ArgumentParser:
-    parser = ArgumentParser(description="Validate a saved CPT checkpoint.")
+    parser = ArgumentParser(description="Validate a saved model checkpoint.")
     parser.add_argument(
         "--checkpoint",
         type=Path,
         required=True,
-        help="Path to the saved CPT checkpoint.",
+        help="Path to the saved model checkpoint.",
     )
     parser.add_argument(
         "--prompt",

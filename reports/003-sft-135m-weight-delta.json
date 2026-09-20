@@ -1,0 +1,83 @@
+{
+  "base_model": "HuggingFaceTB/SmolLM2-135M",
+  "target_model": "outputs/003-sft-135m",
+  "threshold": 1e-08,
+  "total_parameters": 134515008,
+  "changed_parameters": 134509022,
+  "unchanged_parameters": 5986,
+  "changed_percentage": 99.99554993893321,
+  "mean_absolute_delta": 0.0002792114677004087,
+  "max_absolute_delta": 0.0019306913018226624,
+  "top_parameter_deltas": [
+    {
+      "name": "model.layers.28.self_attn.v_proj.weight",
+      "parameter_count": 110592,
+      "changed_parameters": 110587,
+      "mean_absolute_delta": 0.000343845812258897,
+      "max_absolute_delta": 0.0014597177505493164
+    },
+    {
+      "name": "model.layers.27.self_attn.k_proj.weight",
+      "parameter_count": 110592,
+      "changed_parameters": 110589,
+      "mean_absolute_delta": 0.0003385768375462956,
+      "max_absolute_delta": 0.0012751026079058647
+    },
+    {
+      "name": "model.layers.27.input_layernorm.weight",
+      "parameter_count": 576,
+      "changed_parameters": 576,
+      "mean_absolute_delta": 0.0003363728368033965,
+      "max_absolute_delta": 0.0009568929672241211
+    },
+    {
+      "name": "model.layers.27.self_attn.q_proj.weight",
+      "parameter_count": 331776,
+      "changed_parameters": 331771,
+      "mean_absolute_delta": 0.00033601688474048803,
+      "max_absolute_delta": 0.0013913251459598541
+    },
+    {
+      "name": "model.layers.28.self_attn.k_proj.weight",
+      "parameter_count": 110592,
+      "changed_parameters": 110592,
+      "mean_absolute_delta": 0.0003351084198112841,
+      "max_absolute_delta": 0.00154862180352211
+    },
+    {
+      "name": "model.layers.26.self_attn.o_proj.weight",
+      "parameter_count": 331776,
+      "changed_parameters": 331772,
+      "mean_absolute_delta": 0.0003333522903698462,
+      "max_absolute_delta": 0.0013717412948608398
+    },
+    {
+      "name": "model.layers.25.self_attn.o_proj.weight",
+      "parameter_count": 331776,
+      "changed_parameters": 331771,
+      "mean_absolute_delta": 0.00033239335005666004,
+      "max_absolute_delta": 0.0013234131038188934
+    },
+    {
+      "name": "model.layers.27.self_attn.o_proj.weight",
+      "parameter_count": 331776,
+      "changed_parameters": 331769,
+      "mean_absolute_delta": 0.00033193465644194755,
+      "max_absolute_delta": 0.0013360418379306793
+    },
+    {
+      "name": "model.layers.29.post_attention_layernorm.weight",
+      "parameter_count": 576,
+      "changed_parameters": 576,
+      "mean_absolute_delta": 0.00033106194395158027,
+      "max_absolute_delta": 0.0009535849094390869
+    },
+    {
+      "name": "model.layers.28.input_layernorm.weight",
+      "parameter_count": 576,
+      "changed_parameters": 576,
+      "mean_absolute_delta": 0.00033087645553880266,
+      "max_absolute_delta": 0.0011112987995147705
+    }
+  ]
+}

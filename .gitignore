@@ -22,9 +22,10 @@ models/
 checkpoints/
 
 # Training outputs
-outputs/
+outputs/*
 runs/
 wandb/
+!outputs/.gitkeep
 
 # Large model files
 *.safetensors
