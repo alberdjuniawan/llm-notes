@@ -7,7 +7,7 @@ from transformers import AutoModelForCausalLM
 
 def parse_args() -> ArgumentParser:
     parser = ArgumentParser(
-        description="Analyze parameter changes between a base model and CPT checkpoint."
+        description="Analyze parameter changes between a base model and a target checkpoint."
     )
     parser.add_argument(
         "--base-model",
@@ -16,10 +16,10 @@ def parse_args() -> ArgumentParser:
         help="Hugging Face model ID or local base checkpoint.",
     )
     parser.add_argument(
-        "--cpt-model",
+        "--target-model",
         type=Path,
         required=True,
-        help="Path to the CPT checkpoint.",
+        help="Path to the target model checkpoint.",
     )
     parser.add_argument(
         "--output",
@@ -40,8 +40,8 @@ def parse_args() -> ArgumentParser:
 def main() -> None:
     args = parse_args().parse_args()
 
-    if not args.cpt_model.exists():
-        raise FileNotFoundError(f"CPT checkpoint not found: {args.cpt_model}")
+    if not args.target_model.exists():
+        raise FileNotFoundError(f"Target checkpoint not found: {args.target_model}")
 
     if args.threshold < 0:
         raise ValueError("threshold must be non-negative")
@@ -52,17 +52,17 @@ def main() -> None:
         args.base_model,
     )
 
-    print(f"Loading CPT model: {args.cpt_model}")
+    print(f"Loading target model: {args.target_model}")
 
-    cpt_model = AutoModelForCausalLM.from_pretrained(
-        args.cpt_model,
+    target_model = AutoModelForCausalLM.from_pretrained(
+        args.target_model,
     )
 
     base_parameters = dict(base_model.named_parameters())
-    cpt_parameters = dict(cpt_model.named_parameters())
+    target_parameters = dict(target_model.named_parameters())
 
-    if base_parameters.keys() != cpt_parameters.keys():
-        raise ValueError("Base and CPT models have different parameter names.")
+    if base_parameters.keys() != target_parameters.keys():
+        raise ValueError("Base and target models have different parameter names.")
 
     total_parameters = 0
     changed_parameters = 0
@@ -72,15 +72,15 @@ def main() -> None:
     parameter_deltas = []
 
     for name, base_parameter in base_parameters.items():
-        cpt_parameter = cpt_parameters[name]
+        target_parameter = target_parameters[name]
 
-        if base_parameter.shape != cpt_parameter.shape:
+        if base_parameter.shape != target_parameter.shape:
             raise ValueError(f"Shape mismatch for parameter: {name}")
 
         base_values = base_parameter.detach().float()
-        cpt_values = cpt_parameter.detach().float()
+        target_values = target_parameter.detach().float()
 
-        delta = cpt_values - base_values
+        delta = target_values - base_values
         absolute_delta = delta.abs()
 
         parameter_count = delta.numel()
@@ -122,7 +122,7 @@ def main() -> None:
 
     metrics = {
         "base_model": args.base_model,
-        "cpt_model": str(args.cpt_model),
+        "target_model": str(args.target_model),
         "threshold": args.threshold,
         "total_parameters": total_parameters,
         "changed_parameters": changed_parameters,
